@@ -1,0 +1,27 @@
+version: '3'
+
+tasks:
+  build:
+    desc: Build the html
+    cmds:
+      - mdbook build
+
+  deploy:
+    desc: Deploy the tarball to the server and extract it
+    deps: [build]
+    cmds:
+      - git clone --depth 1 git@github.com:esperoj/esperoj.git
+      - mv book esperoj/projects/frontend/public
+      - cd esperoj/projects/frontend && task deploy
+
+  clean:
+    desc: Clean up build artifacts
+    cmds:
+      - rm -rf book esperoj
+
+  all:
+    desc: Build, Package, Deploy, and Clean
+    cmds:
+      - task: build
+      - defer: { task: clean }
+      - task: deploy

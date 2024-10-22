@@ -1,0 +1,18 @@
+[book]
+authors = ["Esperoj"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Notebook"
+
+[output.html]
+mathjax-support = true
+
+[output.html.print]
+enable = true
+page-break = true
+
+[output.html.fold]
+enable = true
+level = 0
+
