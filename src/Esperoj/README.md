@@ -23,7 +23,7 @@ Here is the config for esperoj
 "backup-0=pcloud-0:backup" "backup-1=koofr:backup"
 "audio-0=pcloud-1:audio" "audio-1=koofr:audio"
 "document-0=pcloud-0:document" "document=koofr:document"
-"picture-0=pcloud-0:picture" "picture=koofr:picture"
+"picture-0=pcloud-0:picture" "picture-1=koofr:picture"
 "archive-0=pcloud-1:archive" "archive-1=koofr:archive"
 "cache=b2:esperoj-cache"
 "public=b2:esperoj-public"
@@ -44,7 +44,7 @@ Here is the config for esperoj
 
 1. Sunc workspace from phone to workspace-0 to workspace-1.
 2. Sync backup-0 to backup-1.
-3. Create a backup file from backup-0, and upload it to [public](https://public.esperoj.eu.org), and then archive using Archive.org every Sunday night and Thursday.
+3. Create a backup file from backup-0, and upload it to [public](https://public.esperoj.eu.org), and then archive using Archive.org every Sunday night and Wednesday.
 4. Use Archive.org to save esperoj website for reference.
 
 # Issues
