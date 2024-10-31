@@ -49,10 +49,20 @@ Here is the config for esperoj
 
 # Issues
 
-## Internet Archive is unreliable
+## Speedtest
 
+### Archive.org
 ```bash
-wget -SO /dev/null "https://x.0ms.dev/q70/https://web.archive.org/web/20240904034409if_/https://x.0ms.dev/q70/https://fsn1-speed.hetzner.com/1GB.bin"
+wget -U esperoj -SO /dev/null "https://x.0ms.dev/q70/https://web.archive.org/web/20240904034409if_/https://x.0ms.dev/q70/https://fsn1-speed.hetzner.com/1GB.bin"
 ```
 
+### Filehaus
+```bash
+wget -U esperoj -SO /dev/null "https://x.0ms.dev/q70/https://cdn3.filehaus.su/files/1719828664_43687/lendenapp_customuser.7z.001"
+```
+
+### Fielditch
+```bash
+https://small.fileditchstuff.me/s18/dOKhBCqgWbysfcYdixAC.jpg
+```
 ## Files exist in multiple formats, such as converting from EPUB to PDF and PDF/A.
