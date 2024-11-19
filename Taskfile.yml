@@ -1,26 +1,44 @@
 version: '3'
 
+run: when_changed
+
 tasks:
-  build:
-    desc: Build the html
+  setup:
+    status:
+      - test -d .venv
+      - test -d .vercel
     cmds:
-      - mdbook build
+      - uv venv
+      - uv pip install mkdocs
+      - |
+        npx --yes \
+          vercel --token "$VERCEL_TOKEN" \
+            link --yes \
+              --project esperoj
+
+  build:
+    deps:
+      - task: setup
+    desc: Build the site
+    cmds:
+      - mkdocs build
 
   deploy:
-    desc: Deploy the tarball to the server and extract it
+    desc: Deploy
     deps: [build]
     cmds:
-      - git clone --depth 1 git@github.com:esperoj/esperoj.git
-      - mv book esperoj/projects/frontend/public
-      - cd esperoj/projects/frontend && task deploy
+      - |
+        npx --yes \
+          vercel --token "$VERCEL_TOKEN" \
+            deploy --yes --prod
 
   clean:
     desc: Clean up build artifacts
     cmds:
-      - rm -rf book esperoj
+      - rm -rf site
 
   all:
-    desc: Build, Package, Deploy, and Clean
+    desc: Build, Deploy, and Clean
     cmds:
       - task: build
       - defer: { task: clean }

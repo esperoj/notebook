@@ -4,14 +4,14 @@ when:
 
 steps:
   deploy:
-    image: codeberg.org/esperoj/dotfiles
+    image: codeberg.org/esperoj/dotfiles:dev
     pull: true
     secrets: [ encryption_passphrase ]
     commands:
       - command time -v ~/bin/run-command.sh -h "local" -c "task all"
 
   notify:
-    image: codeberg.org/esperoj/dotfiles
+    image: codeberg.org/esperoj/dotfiles:base
     secrets: [ encryption_passphrase ]
     when:
       - event: push

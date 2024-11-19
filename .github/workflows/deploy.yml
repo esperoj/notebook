@@ -1,0 +1,48 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deploy:
+    runs-on: ${{ vars.default_runner || 'ubuntu-latest' }}
+    if: github.server_url == 'https://codeberg.org' && github.repository == 'esperoj/notebook'
+    container:
+      image: esperoj/dotfiles:dev
+      env:
+        ENCRYPTION_PASSPHRASE: ${{ secrets.ENCRYPTION_PASSPHRASE }}
+        MY_UUID: ${{ secrets.MY_UUID }}
+
+    name: Deploy to Vercel
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Deploy
+        run: |
+          cd /root
+          export HOME=/root
+          command time -v "$HOME/bin/run-command.sh" -h local -c "task all"
+
+      - name: Send notification
+        if: ${{ always() }}
+        run: |
+          if [[ "${GITHUB_SERVER_URL}" == "https://github.com" ]]; then
+            URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          else
+            URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_NUMBER}"
+          fi
+          cd /root
+          export HOME=/root
+          source ~/.profile
+          notify.sh "${COMMAND}" \
+            "Title: Workflow ${{ github.workflow }} of ${{ github.repositoryUrl }} had completed." \
+            "Actions: view, View log, $URL" \
+            | jq
