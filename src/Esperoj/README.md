@@ -18,16 +18,18 @@
 
 Here is the config for esperoj
 
-```text
-"workspace-0=pcloud-0:workspace" "workspace-1=koofr:workspace"
-"backup-0=pcloud-0:backup" "backup-1=koofr:backup"
-"audio-0=pcloud-1:audio" "audio-1=koofr:audio"
-"document-0=pcloud-0:document" "document=koofr:document"
-"picture-0=pcloud-0:picture" "picture-1=koofr:picture"
-"archive-0=pcloud-1:archive" "archive-1=koofr:archive"
-"cache=b2:esperoj-cache"
-"public=b2:esperoj-public"
-"tmp=pcloud-0:tmp"
+```bash
+echo $(echo '
+  "workspace-0=pcloud-0:workspace" "workspace-1=mega:workspace"
+  "backup-0=pcloud-0:backup" "backup-1=mega:backup"
+  "audio-0=pcloud-1:audio" "audio-1=mega:audio"
+  "document-0=pcloud-0:document" "document=mega:document"
+  "picture-0=pcloud-0:picture" "picture-1=mega:picture"
+  "archive-0=pcloud-1:archive" "archive-1=mega:archive"
+  "cache=b2:esperoj-cache"
+  "public=b2:esperoj-public"
+  "tmp=pcloud-0:tmp"
+')
 ```
 
 # File Ingestion
@@ -47,6 +49,9 @@ Here is the config for esperoj
 3. Create a backup file from backup-0, and upload it to [public](https://public.esperoj.eu.org), and then archive using Archive.org every Sunday night and Wednesday.
 4. Use Archive.org to save esperoj website for reference.
 
+# Maintenance
+
+- Upgrade python version when Vercel and Nuitka support it.
 # Issues
 
 ## Speedtest
@@ -65,4 +70,10 @@ wget -U esperoj -SO /dev/null "https://x.0ms.dev/q70/https://cdn3.filehaus.su/fi
 ```bash
 https://small.fileditchstuff.me/s18/dOKhBCqgWbysfcYdixAC.jpg
 ```
+
+### Catbox.moe
+```bash
+wget -U "firefox" -SO /dev/null "https://x.0ms.dev/q70/https://files.catbox.moe/g8ow4s.mp4?s=$RANDOM"
+```
+
 ## Files exist in multiple formats, such as converting from EPUB to PDF and PDF/A.

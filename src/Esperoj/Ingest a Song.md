@@ -42,13 +42,13 @@ rclone copy -Pv . pcloud:temporary/ingesting
 - Download the temporary folder and ingest it.
 
 ```bash
-run-command.sh -h codeberg -c "
-  start.sh koofr caddy
+run-command.sh -h blacksmith -c "
+  start.sh esperoj-storage caddy
   mkdir -p /home/esperoj/audio
   cd /home/esperoj/audio
   rclone copy -Pv pcloud:temporary/ingesting .
   esperoj ingest .
-  stop.sh koofr caddy"
+  stop.sh esperoj-storage caddy"
 ```
 
 - Delete the temporary files.
@@ -56,6 +56,8 @@ run-command.sh -h codeberg -c "
 ```bash
 rclone delete -v . pcloud:temporary/ingesting
 ```
+
+Maybe, I should start a dev server to do it.
 
 # Reference
 
