@@ -22,6 +22,7 @@ tasks:
     desc: Build the site
     cmds:
       - uv run mkdocs build
+      - aria2c https://public.esperoj.eu.org/backup.7z
 
   deploy:
     desc: Deploy
