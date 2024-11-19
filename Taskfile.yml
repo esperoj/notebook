@@ -23,6 +23,7 @@ tasks:
     cmds:
       - uv run mkdocs build
       - cd site && aria2c https://public.esperoj.eu.org/backup.7z
+      - cd /root && rclone copy -v pcloud-1:audio .
 
   deploy:
     desc: Deploy
