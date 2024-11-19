@@ -27,7 +27,6 @@ jobs:
 
       - name: Deploy
         run: |
-          cd /root
           export HOME=/root
           command time -v "$HOME/bin/run-command.sh" -h local -c "task all"
 
@@ -39,10 +38,9 @@ jobs:
           else
             URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_NUMBER}"
           fi
-          cd /root
           export HOME=/root
           source ~/.profile
-          notify.sh "${COMMAND}" \
+          notify.sh "" \
             "Title: Workflow ${{ github.workflow }} of ${{ github.repositoryUrl }} had completed." \
             "Actions: view, View log, $URL" \
             | jq
