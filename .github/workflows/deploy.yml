@@ -25,12 +25,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
 
-      - name: Test
-        run: |
-          export HOME=/root
-          command time -v "$HOME/bin/run-command.sh" -h local -c "info.sh"
-          aria2c -x1 "https://x.0ms.dev/q70/http://ping.online.net/1000Mo.dat"
-
       - name: Deploy
         run: |
           export HOME=/root
