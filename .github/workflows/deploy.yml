@@ -13,7 +13,7 @@ defaults:
 jobs:
   deploy:
     runs-on: ${{ vars.default_runner || 'ubuntu-latest' }}
-    if: github.server_url == 'https://codeberg.org' && github.repository == 'esperoj/notebook'
+    if: github.server_url == 'https://git.gay' && github.repository == 'esperoj/notebook'
     container:
       image: esperoj/dotfiles:dev
       env:

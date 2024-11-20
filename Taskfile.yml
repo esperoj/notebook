@@ -32,7 +32,6 @@ tasks:
         npx --yes \
           vercel --token "$VERCEL_TOKEN" \
             deploy --yes --prod
-      - esperoj save_page https://www.esperoj.eu.org/backup.7z
 
   clean:
     desc: Clean up build artifacts

@@ -1,8 +1,11 @@
 when:
   - event: push
-
+    evaluate: 'CI_SYSTEM_HOST == "ci.codeberg.org"'
+  - event: manual
+    evaluate: 'WORKFLOW == "deploy"'
 
 steps:
+
   deploy:
     image: codeberg.org/esperoj/dotfiles:dev
     pull: true
@@ -12,15 +15,15 @@ steps:
 
   notify:
     image: codeberg.org/esperoj/dotfiles:base
+    pull: true
     secrets: [ encryption_passphrase ]
     when:
-      - event: push
-        status: failure
+      - event: [ manual, push ]
+        status: [ success, failure ]
     commands:
       - |
         ~/bin/run-command.sh -h local -c '
-        xargs -d "\n" notify.sh <<EOL | jq
-        Workflow "$${CI_WORKFLOW_NAME}" of repository $${CI_REPO_URL} has completed with status $${CI_PIPELINE_STATUS}.
-        Title: A workflow has failed
-        Actions: view, View Log, $${CI_SYSTEM_URL}/repos/$${CI_REPO}/pipeline/$${CI_PIPELINE_NUMBER}
-        EOL'
+        notify.sh "Workflow $${CI_WORKFLOW_NAME} of repository $${CI_REPO_URL} has completed for command $${COMMAND} with status $${CI_PIPELINE_STATUS}." \
+          "Title: A job has completed" \
+          "Actions: view, View Log, $${CI_SYSTEM_URL}/repos/$${CI_REPO}/pipeline/$${CI_PIPELINE_NUMBER}" \
+        | jq'
