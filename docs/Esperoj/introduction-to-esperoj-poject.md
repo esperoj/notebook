@@ -6,11 +6,11 @@
 |--------------------------|------------------------------|-----------|-------------|
 | Archive.org              | Archive.org                  | Filen     | Archive.org |
 | Catbox.moe               | Catbox.moe                   | Pcloud    | Backblaze   |
-| File.haus                | File.haus                    | Phone     | Filen       |
-| FileDitch                | FileDitch                    |           | Pcloud      |
-| Filen                    | Lain.la                      |           | Phone       |
-| Lain.la                  |                              |           |             |
+| FileDitch                | FileDitch                    | Phone     | Filen       |
+| Filen                    | Lain.la                      |           | Pcloud      |
+| Lain.la                  |                              |           | Phone       |
 | Pcloud                   |                              |           |             |
+
 
 - public files, and cache store in Backblaze.
 - Temporary files store in Pcloud.
@@ -61,11 +61,6 @@ echo $(echo '
 #### Archive.org
 ```bash
 wget -U esperoj -SO /dev/null "https://x.0ms.dev/q70/https://web.archive.org/web/20240904034409if_/https://x.0ms.dev/q70/https://fsn1-speed.hetzner.com/1GB.bin"
-```
-
-#### Filehaus
-```bash
-wget -U esperoj -SO /dev/null "https://x.0ms.dev/q70/https://cdn3.filehaus.su/files/1719828664_43687/lendenapp_customuser.7z.001"
 ```
 
 #### Fielditch
