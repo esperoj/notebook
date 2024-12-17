@@ -20,3 +20,7 @@ I extend my heartfelt appreciation for the time and service DoubleDouble.top off
 
 AniWave and Fmovies were shut down in August 2024. Their operators were reportedly Vietnamese, and Fmovies was founded in 2016. I am grateful for the years of anime streaming and have since transitioned to HiAnime.to. Thank you for the entertainment and joy you've brought into my life.
 
+### File.haus
+
+https://archive.is/XHBG4
+https://megalodon.jp/2024-1209-1523-26/https://filehaus.top:443/
