@@ -65,7 +65,7 @@ wget -U esperoj -SO /dev/null "https://x.0ms.dev/q70/https://web.archive.org/web
 
 #### Fielditch
 ```bash
-https://small.fileditchstuff.me/s18/dOKhBCqgWbysfcYdixAC.jpg
+wget -U "firefox" -SO /dev/null "https://big.fileditchstuff.me/b49/whTIpzGvVaSJZXkfTrFk.zip"
 ```
 
 #### Catbox.moe
