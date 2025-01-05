@@ -22,15 +22,15 @@ Here is the config for esperoj
 
 ```bash
 echo $(echo '
-  "workspace-0=pcloud-0:workspace" "workspace-1=mega:workspace"
-  "backup-0=pcloud-0:backup" "backup-1=mega:backup"
-  "audio-0=pcloud-1:audio" "audio-1=mega:audio"
-  "document-0=pcloud-0:document" "document=mega:document"
-  "picture-0=pcloud-0:picture" "picture-1=mega:picture"
-  "archive-0=pcloud-1:archive" "archive-1=mega:archive"
+  "workspace-0=pcloud-0:esperoj/workspace" "workspace-1=mega:esperoj/workspace"
+  "backup-0=megadisk:esperoj/backup" "backup-1=pcloud-0:esperoj/backup"
+  "audio-0=pcloud-1:esperoj/audio" "audio-1=mega:esperoj/audio"
+  "document-0=pcloud-0:esperoj/document" "document=mega:esperoj/document"
+  "picture-0=pcloud-0:esperoj/picture" "picture-1=mega:esperoj/picture"
+  "archive-0=pcloud-1:esperoj/archive" "archive-1=mega:esperoj/archive"
   "cache=b2:esperoj-cache"
   "public=b2:esperoj-public"
-  "tmp=pcloud-0:tmp"
+  "tmp=pcloud-0:esperoj/tmp"
 ')
 ```
 
