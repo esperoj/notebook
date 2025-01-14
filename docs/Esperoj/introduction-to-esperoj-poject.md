@@ -23,7 +23,7 @@ Here is the config for esperoj
 ```bash
 echo $(echo '
   "workspace-0=pcloud-0:esperoj/workspace" "workspace-1=mega:esperoj/workspace"
-  "backup-0=megadisk:esperoj/backup" "backup-1=pcloud-0:esperoj/backup"
+  "backup-0=pcloud-0:esperoj/backup" "backup-1=megadisk:esperoj/backup"
   "audio-0=pcloud-1:esperoj/audio" "audio-1=mega:esperoj/audio"
   "document-0=pcloud-0:esperoj/document" "document=mega:esperoj/document"
   "picture-0=pcloud-0:esperoj/picture" "picture-1=mega:esperoj/picture"

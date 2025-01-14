@@ -13,6 +13,7 @@
 
 ## How to restore my data
 
+- [Wayback Machine](https://web.archive.org/web/20250105152253if_/https://notebin.de/?a1caf755a8a06bc1#9sjHkPrv3K4Pgu76DJKAUPSPvWs9bUpkKhuDQ1hxR8gL)
 - [disroot](https://bin.disroot.org/?72b516aa28ca61c0#DwSgEFpcnCnaHwcba4zmcfWCLwWQBVZr9XNj4QBdAYnu)
 - [envs](https://pb.envs.net/?3d4c99ebffbb609a#A7ZVExATJu6ugr5cupDsTMiMoyN5nZzs5LZQE12hRfZ1)
 - [adminforge](https://notebin.de/?a1caf755a8a06bc1#9sjHkPrv3K4Pgu76DJKAUPSPvWs9bUpkKhuDQ1hxR8gL)
