@@ -13,7 +13,8 @@
 
 ## How to restore my data
 
-- [Wayback Machine](https://web.archive.org/web/20250105152253if_/https://notebin.de/?a1caf755a8a06bc1#9sjHkPrv3K4Pgu76DJKAUPSPvWs9bUpkKhuDQ1hxR8gL)
-- [disroot](https://bin.disroot.org/?72b516aa28ca61c0#DwSgEFpcnCnaHwcba4zmcfWCLwWQBVZr9XNj4QBdAYnu)
-- [envs](https://pb.envs.net/?3d4c99ebffbb609a#A7ZVExATJu6ugr5cupDsTMiMoyN5nZzs5LZQE12hRfZ1)
-- [adminforge](https://notebin.de/?a1caf755a8a06bc1#9sjHkPrv3K4Pgu76DJKAUPSPvWs9bUpkKhuDQ1hxR8gL)
+- [Wayback Machine](https://web.archive.org/web/20250119030327/https://paste.nolog.cz/?b04c5dd7708db04f#9TGYPNgzjQgG6wADvKK6oReMwtzXnihZo3YJb97ejqGa)
+- [NoLog](https://paste.nolog.cz/?b04c5dd7708db04f#9TGYPNgzjQgG6wADvKK6oReMwtzXnihZo3YJb97ejqGa)
+- [Disroot](https://bin.disroot.org/?415981c9d22eb768#8wctzgMFPMwL9ETeQA56UNGDTERTGnCY3eWr7dLYTD33)
+- [Envs](https://pb.envs.net/?df2653cbd3a3f0f3#FveW8vs2C694ymQ88G82VrCE7yyCPifm9MK3dDayPPL8)
+- [AdminForge](https://notebin.de/?ab5696f071544752#5iaQ3X29apvfU5v5Di6rLgyTuoWc6bZN7zTvLLsLsezN)

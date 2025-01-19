@@ -1,39 +1,5 @@
 # Introduction to Esperoj Project
 
-## File Locations
-
-| Audio, Document, Picture | Game, Comic, Video, Software | Workspace | Backup      |
-|--------------------------|------------------------------|-----------|-------------|
-| Archive.org              | Archive.org                  | Filen     | Archive.org |
-| Catbox.moe               | Catbox.moe                   | Pcloud    | Backblaze   |
-| FileDitch                | FileDitch                    | Phone     | Filen       |
-| Filen                    | Lain.la                      |           | Pcloud      |
-| Lain.la                  |                              |           | Phone       |
-| Pcloud                   |                              |           |             |
-
-
-- public files, and cache store in Backblaze.
-- Temporary files store in Pcloud.
-- Archive files store in Filen and Pcloud.
-- pcloud-0: workspace, backup, documents, picture, and temporary files
-- pcloud-1: music, archive, 
-
-Here is the config for esperoj
-
-```bash
-echo $(echo '
-  "workspace-0=pcloud-0:esperoj/workspace" "workspace-1=mega:esperoj/workspace"
-  "backup-0=pcloud-0:esperoj/backup" "backup-1=megadisk:esperoj/backup"
-  "audio-0=pcloud-1:esperoj/audio" "audio-1=mega:esperoj/audio"
-  "document-0=pcloud-0:esperoj/document" "document=mega:esperoj/document"
-  "picture-0=pcloud-0:esperoj/picture" "picture-1=mega:esperoj/picture"
-  "archive-0=pcloud-1:esperoj/archive" "archive-1=mega:esperoj/archive"
-  "cache=b2:esperoj-cache"
-  "public=b2:esperoj-public"
-  "tmp=pcloud-0:esperoj/tmp"
-')
-```
-
 ## File Ingestion
 
 1. Ingest files.
@@ -60,7 +26,7 @@ echo $(echo '
 
 #### Archive.org
 ```bash
-wget -U esperoj -SO /dev/null "https://x.0ms.dev/q70/https://web.archive.org/web/20240904034409if_/https://x.0ms.dev/q70/https://fsn1-speed.hetzner.com/1GB.bin"
+wget -U esperoj -SO /dev/null "https://x.0ms.dev/q70/https://web.archive.org/web/20250106230454im_/https://mirrors.dotsrc.org/kiwix/zim/ifixit/ifixit_en_all_2024-12.zim"
 ```
 
 #### Fielditch
