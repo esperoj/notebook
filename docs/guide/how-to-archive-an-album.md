@@ -1,18 +1,22 @@
 # How to Archive an album
+## Rename command
 
-## Fill metadata in temp ini file
-
+### Rename (1) to (01)
 ```bash
-cp data/ingest_album_template.toml ~/tmp
-vim ~/tmp/ingest_album_template.toml
+rename -n 's/\((\d+)\)/sprintf("(%02d)", $1)/e' *
 ```
 
-## Upload to imagekit
+## Script to ingest
 
-## Generated a markdown files with the files and metadata
-
-## Upload to Pastebin
-
-## Archive in wayback machine
-
-## Add record to database
+```bash
+echo "Please enter file name:"
+read filename
+mkdir -p "ingest-${filename}"
+mv "${filename}" "ingest-${filename}"
+cp ~/data/ingest_album_template.toml "ingest-${filename}"
+vim "ingest-${filename}/ingest_album_template.toml"
+rclone copy "ingest-${filename}" tmp:"ingest-${filename}" -P
+run-command.sh -h codeberg -c "rclone copy -v 'tmp:ingest-${filename}' './ingest-${filename}' && time esperoj ingest_album \
+  --metadata-file='ingest-${filename}/ingest_album_template.toml' \
+  'ingest-${filename}/$filename'"
+```
